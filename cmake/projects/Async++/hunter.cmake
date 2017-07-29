@@ -11,6 +11,17 @@ hunter_add_version(
     PACKAGE_NAME
     Async++
     VERSION
+    "0.0.4"
+    URL
+    "https://github.com/BeautyCpp/asyncplusplus/archive/v0.0.4.tar.gz"
+    SHA1
+    d29ce3dd4c6a184b37034bb963db6d854ef60c27
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Async++
+    VERSION
     "0.0.3-hunter"
     URL
     "https://github.com/hunter-packages/asyncplusplus/archive/v0.0.3-hunter.tar.gz"
