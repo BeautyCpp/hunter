@@ -4,7 +4,7 @@
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
 include(hunter_add_version)
-include(hunter_cacheable)
+#include(hunter_cacheable)
 include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
@@ -14,6 +14,18 @@ set(Boost_NO_SYSTEM_PATHS ON)
 
 # use base url for official boost releases
 set(_hunter_boost_base_url "https://downloads.sourceforge.net/project/boost/boost/")
+
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
+    "1.64.0.cmake"
+    URL
+    "https://github.com/BeautyCpp/boost/archive/v1.6.4.tar.gz"
+    SHA1
+    5b05c8a3caa0025372798422b8328809da66a063
+)
+
 
 hunter_add_version(
     PACKAGE_NAME
@@ -254,6 +266,6 @@ hunter_add_version(
     26a52840e9d12f829e3008589abf0a925ce88524
 )
 
-hunter_pick_scheme(DEFAULT url_sha1_boost)
-hunter_cacheable(Boost)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
+#hunter_cacheable(Boost)
 hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "16")
